@@ -8,21 +8,21 @@ import domain.medico.value.MensajeId;
 
 public class CrearMensaje extends Command {
 
-    private final MensajeId pedidoId;
+    private final MensajeId mensajeId;
     private final Fecha fecha;
     private Contenido contenido;
     private Destinatario destinatario;
 
 
-    public CrearMensaje(MensajeId pedidoId, Fecha fecha, Contenido contenido, Destinatario destinatario) {
-        this.pedidoId = pedidoId;
+    public CrearMensaje(MensajeId mensajeId, Fecha fecha, Contenido contenido, Destinatario destinatario) {
+        this.mensajeId = mensajeId;
         this.fecha = fecha;
         this.contenido = contenido;
         this.destinatario = destinatario;
     }
 
-    public MensajeId getPedidoId() {
-        return pedidoId;
+    public MensajeId getMensajeId() {
+        return mensajeId;
     }
 
     public Fecha getFecha() {

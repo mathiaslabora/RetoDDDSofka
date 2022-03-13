@@ -5,7 +5,7 @@ import co.com.sofka.domain.generic.ValueObject;
 public class Nota implements ValueObject<String> {
     private final String value;
 
-    public Nota(String value) {
+    public Nota(Nota value) {
         this.value = value;
     }
 

@@ -15,7 +15,7 @@ public class Grupo extends AggregateEvent<GrupoId> {
     protected Discusion discucion;
     protected Set<UsuarioId> usuarioId;
 
-    private Grupo (GrupoId grupoId){
+    public Grupo(GrupoId grupoId){
         super(grupoId);
         subscribe(new GrupoEventChange(this));
     }

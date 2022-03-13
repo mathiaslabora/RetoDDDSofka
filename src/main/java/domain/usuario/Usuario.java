@@ -16,7 +16,7 @@ public class Usuario extends AggregateEvent<UsuarioId> {
     protected Seguimiento seguimiento;
     protected Nombre nombre;
 
-    private Usuario(UsuarioId usuarioId){
+    public Usuario(UsuarioId usuarioId){
         super(usuarioId);
         subscribe(new UsuarioEventChange(this));
     }

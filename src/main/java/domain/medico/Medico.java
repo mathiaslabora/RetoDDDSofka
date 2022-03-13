@@ -18,7 +18,7 @@ public class Medico extends AggregateEvent<MedicoId> {
     protected Conferencia conferencia;
 
 
-private Medico (MedicoId medicoId){
+public Medico(MedicoId medicoId){
     super(medicoId);
     subscribe(new MedicoEventChange(this));
 }
