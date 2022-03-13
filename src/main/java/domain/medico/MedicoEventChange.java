@@ -1,7 +1,12 @@
 package domain.medico;
 
 import co.com.sofka.domain.generic.EventChange;
+import domain.grupo.Discusion;
+import domain.grupo.event.DiscusionCreada;
+import domain.medico.event.EspecializacionMedicoEditada;
+import domain.medico.event.InformacionConferenciaActualizada;
 import domain.medico.event.MedicoCreado;
+import domain.medico.event.MensajeCreado;
 
 public class MedicoEventChange extends EventChange {
     public MedicoEventChange (Medico medico){
@@ -13,6 +18,11 @@ public class MedicoEventChange extends EventChange {
             medico.publicacionMedica = event.getPublicacionMedica();
             medico.especializacion = event.getEspecializacion();
         });
+    apply((EspecializacionMedicoEditada event)->{
+        medico.especializacion = event.getEspecializacion();
+    });
+
+
 
 
     }

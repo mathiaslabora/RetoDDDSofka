@@ -11,7 +11,7 @@ public class CrearDiscusionUseCase extends UseCase<RequestCommand<CrearDiscusion
     public void executeUseCase(RequestCommand<CrearDiscusion> input) {
         CrearDiscusion crearDiscusion = input.getCommand();
 
-        Discusion discusion = new Discusion(crearDiscusion.getGrupoId()));
+        Discusion discusion = (new Discusion(crearDiscusion.getGrupoId()));
         emit().onResponse(new ResponseEvents(discusion.getUncommittedChanges()));
     }
 }
