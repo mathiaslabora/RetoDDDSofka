@@ -4,7 +4,6 @@ import co.com.sofka.domain.generic.Entity;
 import domain.generic.Fecha;
 import domain.medico.value.ConferenciaId;
 import domain.medico.value.Informacion;
-import domain.medico.value.PublicacionMedicaId;
 
 public class Conferencia extends Entity<ConferenciaId> {
     private final Fecha fecha;
